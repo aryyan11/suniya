@@ -35,7 +35,7 @@ export async function POST(req) {
       });
     }
 
-    const checkPassword = await compare(password, checkUser.password);
+    const checkPassword = await User.findOne({ password });
     if (!checkPassword) {
       return NextResponse.json({
         success: false,

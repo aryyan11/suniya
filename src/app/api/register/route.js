@@ -41,7 +41,7 @@ export async function POST(req) {
         message: "User is already exists. Please try with different email.",
       });
     } else {
-      const hashPassword = await hash(password, 12);
+      const hashPassword = await password;
       
       const newlyCreatedUser = await User.create({
         name,

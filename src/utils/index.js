@@ -68,7 +68,10 @@ export const registrationFormControls = [
     label: "Role",
     componentType: "select",
     options: [
-      
+      {
+        id: "admin",
+        label: "Admin",
+      },
       {
         id: "customer",
         label: "customer",
